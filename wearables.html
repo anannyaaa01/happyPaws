@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HappyPaws - Food</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFD6FF;
+      color: #4A4A4A;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #C8B6FF;
+    }
+    .header .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #4A4A4A;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #4A4A4A;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .cart-icon {
+      font-size: 24px;
+      cursor: pointer;
+      position: relative;
+    }
+    .cart-count {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: red;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 5px 8px;
+      border-radius: 50%;
+      display: none;
+    }
+    .search-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .search-container input[type="text"] {
+      width: 60%;
+      padding: 10px;
+      border: 2px solid #C8B6FF;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 200px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    button {
+      background-color: #C8B6FF;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">🐾 HappyPaws</div>
+    <nav>
+      <ul>
+        <li><a href="E-Commerce.html">Home</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="grooming.html">Grooming</a></li>
+        <li><a href="toys.html">Toys</a></li>
+        <li class="cart-icon">🛒<span class="cart-count">0</span></li>
+      </ul>
+    </nav>
+  </header>
+  
+ <div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search wearables..">
+  </div>
+
+  <section class="product-list">
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/DSC_3688_1.jpg?v=1739041647&width=990" alt="Cozy Snuggles Puffer Fur Dog Jacket">
+        <h3>Cozy Snuggles Puffer Fur Dog Jacket</h3>
+        <p>INR 1399</p>
+        <button onclick="buyNow('Cozy Snuggles Puffer Fur Dog Jacket',1399 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/HUFTTheIndianCollectiveAmbarIndigoDogJacket_1.jpg?v=1739044506&width=990" alt="The Indian Collective Ambar Indigo Dog Jacket">
+        <h3>The Indian Collective Ambar Indigo Dog Jacket</h3>
+        <p>INR 1270</p>
+        <button onclick="buyNow('The Indian Collective Ambar Indigo Dog Jacket', 1270)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/HUFTCosyPupperReversibleDogJacket-OceanBlue_a789c3c9-22bb-404f-a236-40ce54da2e8b.jpg?v=1739044572&width=990" alt="Cosy Pupper Reversible Dog Jacket">
+        <h3>Cosy Pupper Reversible Dog Jacket</h3>
+        <p>INR 1399</p>
+        <button onclick="buyNow('Cosy Pupper Reversible Dog Jacket',1399 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/HUFTTweedleDeeDogJacket-Multicolour.jpg?v=1739044525&width=990" alt="Tweedle Dee Dog Jacket - Multicolour">
+        <h3>HUFT Tweedle Dee Dog Jacket - Multicolour</h3>
+        <p>INR 1599</p>
+        <button onclick="buyNow('Tweedle Dee Dog Jacket - Multicolour',1599 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/HUFTFC739.jpg?v=1739045669&width=990" alt="Cozy Pupper Dog Jacket">
+        <h3>HUFT Cozy Pupper Dog Jacket super soft</h3>
+        <p>INR 1190</p>
+        <button onclick="buyNow('Cozy Pupper Dog Jacket', 1190)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/HUFTFC86823_8f017e4f-cf8e-41da-9bd5-e4168a6686c2.jpg?v=1739044697&width=990" alt="Chief Cuddle Officer Pet Sweatshirt - Green">
+        <h3>Chief Cuddle Officer Pet Sweatshirt - Green</h3>
+        <p>INR 999</p>
+        <button onclick="buyNow('Chief Cuddle Officer Pet Sweatshirt - Green',999 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/HUFTColourBlockHoodiePetSweatshirt-Mustard_1.jpg?v=1739043793&width=990" alt="Colour Block Hoodie Pet Sweatshirt - Mustard">
+        <h3>Colour Block Hoodie Pet Sweatshirt - Mustard</h3>
+        <p>INR 1009</p>
+        <button onclick="buyNow('Colour Block Hoodie Pet Sweatshirt - Mustard', 1009)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/075A9887.jpg?v=1739045219&width=990" alt="Fleece Dog Sweatshirt - Blue Melange">
+        <h3>Fleece Dog Sweatshirt - Blue Melange</h3>
+        <p>INR 999</p>
+        <button onclick="buyNow('Fleece Dog Sweatshirt - Blue Melange', 999)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/HUFTClassicStripePetSweater-Multicolour_416a5c84-3c4b-41a8-b5d9-1a7bea7373c3.jpg?v=1739044634&width=990" alt="Classic Stripe Pet Sweater - Multicolour">
+        <h3>Classic Stripe Pet Sweater - Multicolour</h3>
+        <p>INR 878</p>
+        <button onclick="buyNow('Classic Stripe Pet Sweater - Multicolour',878 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/HUFTStripedCableKnitDogSweater-Pink_4fb5d08c-895e-47c1-80ec-37e7d2b689b9.jpg?v=1739045560&width=990" alt="Striped Cable Knit Dog Sweater - Pink">
+        <h3>HUFT Striped Cable Knit Dog Sweater - Pink</h3>
+        <p>INR 520</p>
+        <button onclick="buyNow('Striped Cable Knit Dog Sweater - Pink',520 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/DSC_4007_d6be4e2d-81e5-4111-85eb-1dc0183454aa.jpg?v=1739041326&width=990" alt="Personalised Blooming Threads Lehenga Choli For Dog">
+        <h3>Personalised Blooming Threads Lehenga Choli For Dog</h3>
+        <p>INR 2019</p>
+        <button onclick="buyNow('Personalised Blooming Threads Lehenga Choli For Dog',2019 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/HUFTPersonalisedStripedDogDress-Blue-OnlyForSmallBreeds.jpg?v=1739045344&width=990" alt="Personalised Striped Dog Dress - Blue - Only For Small Breeds">
+        <h3>Personalised Striped Dog Dress - Blue - Only For Small Breeds</h3>
+        <p>INR 2287</p>
+        <button onclick="buyNow('Personalised Striped Dog Dress - Blue - Only For Small Breeds',2287 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/EcolifeTick_FleaCollarforCats.jpg?v=1637924026&width=990" alt="Ecolife Tick & Flea Collar for Cats">
+        <h3>Ecolife Tick & Flea Collar for Cats flexible material customization </h3>
+        <p>INR 319</p>
+        <button onclick="buyNow('Ecolife Tick & Flea Collar for Cats', 319)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/M-PetsDiamondCatCollar_Assorted_603d8bcb-7eb3-4c3f-a622-deb4ba2483c3.jpg?v=1687347069&width=990" alt="M-Pets Diamond Cat Collar ( 1 Pcs Assorted)">
+        <h3>M-Pets Diamond Cat Collar pack of 3( 1 Pcs Assorted) for cats </h3>
+        <p>INR 520</p>
+        <button onclick="buyNow('M-Pets Diamond Cat Collar ( 1 Pcs Assorted)', 520)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/DSC_5470.jpg?v=1739042997&width=990" alt="Easy Breezy Step-In Harness Set For Cats">
+        <h3>HUFT Easy Breezy Step-In Harness Set For Cats super material</h3>
+        <p>INR 520</p>
+        <button onclick="buyNow('Easy Breezy Step-In Harness Set For Cats',520 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/DSC_3878_fab29afa-639d-4108-b8e1-7bc277e32e94.jpg?v=1739041240&width=990" alt="Personalised Luxe Velvet Bling Fabric Collar With Bow Tie For Dog">
+        <h3>Luxe Velvet Bling Fabric Collar With Bow Tie </h3>
+        <p>INR 1099</p>
+        <button onclick="buyNow('Personalised Luxe Velvet Bling Fabric Collar With Bow Tie For Dog',1099 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/HUFT_Hive_Harmony_Waterproof_Collar_and_Leash_Set_For_Dog_-_Purple_02.jpg?v=1739042005&width=990" alt="Hive Harmony Waterproof Collar and Leash Set For Dog">
+        <h3>Hive Harmony Waterproof Collar and Leash Set </h3>
+        <p>INR 2347</p>
+        <button onclick="buyNow('Hive Harmony Waterproof Collar and Leash Set For Dog', 2347)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://headsupfortails.com/cdn/shop/files/DSC_6150_f62a8893-ae35-4962-95c1-0b9ff7fbdc4c.jpg?v=1720779285&width=990" alt="Whisker Wonderland Cat Tent Bed - Beige">
+      <h3>HUFT Whisker Wonderland Cat Tent Bed - Beige</h3>
+      <p>INR 3140</p>
+      <button onclick="buyNow('Whisker Wonderland Cat Tent Bed - Beige',3140 )">Buy Now</button>
+      <button onclick="addToCart()">Add to Cart</button>
+  </div>
+  <div class="product">
+    <img src="https://headsupfortails.com/cdn/shop/files/HUFTPolkaDropsDogRaincoat.jpg?v=1739045017&width=990" alt="HUFT Polka Drops Dog Raincoat">
+    <h3>HUFT Polka Drops Dog Raincoat dog raincoat</h3>
+    <p>INR 779</p>
+    <button onclick="buyNow('HUFT Polka Drops Dog Raincoat',779 )">Buy Now</button>
+    <button onclick="addToCart()">Add to Cart</button>
+</div>
+<div class="product">
+  <img src="https://headsupfortails.com/cdn/shop/files/DSC_5401_91a442f6-abb0-4ed7-9ac6-b273e58bccd6.jpg?v=1739040965&width=990" alt="HUFT Polka Paws Scarf For Cat & Puppy - Orange">
+  <h3>HUFT Polka Paws Scarf For Cat & Puppy - Orange</h3>
+  <p>INR 1234</p>
+  <button onclick="buyNow('HUFT Polka Paws Scarf For Cat & Puppy - Orange', 1234)">Buy Now</button>
+  <button onclick="addToCart()">Add to Cart</button>
+</div>
+  </section>
+  <script>
+    let cartCount = 0;
+    const cartCountElement = document.querySelector('.cart-count');
+    
+    function addToCart() {
+        cartCount++;
+        cartCountElement.innerText = cartCount;
+        cartCountElement.style.display = 'block';
+    }
+    function buyNow(product, price) {
+        alert(`You are buying: ${product} for INR ${price}`);
+    }   
+</script>
+</body>
+</html>

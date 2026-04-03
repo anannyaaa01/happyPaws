@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HappyPaws - Food</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFD6FF;
+      color: #4A4A4A;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #C8B6FF;
+    }
+    .header .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #4A4A4A;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #4A4A4A;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .cart-icon {
+      font-size: 24px;
+      cursor: pointer;
+      position: relative;
+    }
+    .cart-count {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: red;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 5px 8px;
+      border-radius: 50%;
+      display: none;
+    }
+    .search-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .search-container input[type="text"] {
+      width: 60%;
+      padding: 10px;
+      border: 2px solid #C8B6FF;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 200px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    button {
+      background-color: #C8B6FF;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">🐾 HappyPaws</div>
+    <nav>
+      <ul>
+        <li><a href="E-Commerce.html">Home</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="grooming.html">Grooming</a></li>
+        <li><a href="healthcare.html">healthcare</a></li>
+        <li><a href="Orders.html">Orders</a></li>
+        <li class="cart-icon">🛒<span class="cart-count">0</span></li>
+      </ul>
+    </nav>
+  </header>
+  
+ <div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search for toys...">
+  </div>
+
+  <section class="product-list">
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/DSC_3739.jpg?v=1715853189&width=990" alt="Karlie Shakin Billy Plush Toy For Cat">
+        <h3>Karlie Shakin Billy Plush Toy For Cat</h3>
+        <p>INR 399</p>
+        <button onclick="buyNow('Karlie Shakin Billy Plush Toy For Cat',399 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/612spltG_pL._SL1500__1.jpg?v=1734351988&width=990" alt="Mouse Mischief Plush Toy For Cat - Brown">
+        <h3>Mouse Mischief Plush Toy For Cat</h3>
+        <p>INR 199</p>
+        <button onclick="buyNow('Mouse Mischief Plush Toy For Cat - Brown', 199)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/GiGwiSheepCatToy-RefillableCatnipwith3CatnipTeaBags_dd27115e-7e16-477c-98a6-52c51812b634.jpg?v=1663061920&width=990" alt="Sheep Cat Toy - Refillable Catnip">
+        <h3>Sheep Cat Toy - Refillable Catnip</h3>
+        <p>INR 567 </p>
+        <button onclick="buyNow('Sheep Cat Toy - Refillable Catnip', 567)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/4047974457955-1.jpg?v=1709721290&width=990" alt="Wriggly Fish Catnip Toy For Cat ">
+        <h3>Wriggly Fish Catnip Toy For Cat </h3>
+        <p>INR 456</p>
+        <button onclick="buyNow('Wriggly Fish Catnip Toy For Cat ', 456)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/GiGwi_FeatherTeaser_CatwandwithNaturalFeatherandMouse_TPRHandleToyForCat_1_copy.jpg?v=1709617580&width=990" alt="Feather Teaser' Catwand">
+        <h3>Feather Teaser' Catwand</h3>
+        <p>INR 312</p>
+        <button onclick="buyNow('Feather Teaser Catwand', 312)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/PetstagesDogwoodDurableDogChewStick.jpg?v=1637815377&width=990" alt="Petstages Dogwood Durable Dog Chew Stick">
+        <h3>Dogwood Durable Dog Chew Stick</h3>
+        <p>INR 312</p>
+        <button onclick="buyNow('Petstages Dogwood Durable Dog Chew Stick',312 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/KONGExtremeChewInteractiveDogToy.jpg?v=1663044019&width=990" alt="KONG Extreme Chew Interactive Dog Toy">
+        <h3>KONG Extreme Chew Interactive Dog Toy</h3>
+        <p>INR 516</p>
+        <button onclick="buyNow('KONG Extreme Chew Interactive Dog Toy', 516)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/PetstagesChewStarterDentalDogToys_Packof3_501eaeee-2006-4621-91ca-8409c378182a.jpg?v=1663050250&width=990" alt="Petstages Chew Starter Dental Dog Toys">
+        <h3>Chew Starter Dental Dog Toys</h3>
+        <p>INR 1322</p>
+        <button onclick="buyNow('Petstages Chew Starter Dental Dog Toys', 1322)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/HUFTQuintessentialRubberFootballDogToy-2.jpg?v=1739529407&width=990" alt="Quintessential Rubber Football For Dog">
+        <h3>Rubber Football For Dog</h3>
+        <p>INR 1299</p>
+        <button onclick="buyNow('Quintessential Rubber Football For Dog',1299 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://headsupfortails.com/cdn/shop/products/PetstagesDogwoodDurableDogChewStick.jpg?v=1637815377&width=990" alt="Petstages Dogwood Durable Dog Chew Stick">
+      <h3>Dogwood Durable Dog Chew Stick</h3>
+      <p>INR 312</p>
+      <button onclick="buyNow('Petstages Dogwood Durable Dog Chew Stick',312 )">Buy Now</button>
+      <button onclick="addToCart()">Add to Cart</button>
+  </div>
+  </section>
+  <script>
+    let cartCount = 0;
+    const cartCountElement = document.querySelector('.cart-count');
+    
+    function addToCart() {
+        cartCount++;
+        cartCountElement.innerText = cartCount;
+        cartCountElement.style.display = 'block';
+    }
+    function buyNow(product, price) {
+        alert(`You are buying: ${product} for INR ${price}`);
+    }   
+</script>
+</body>
+</html>

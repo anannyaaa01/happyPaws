@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - HappyPaws</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFD6FF;
+            color: #4A4A4A;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #C8B6FF;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #4A4A4A;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #4A4A4A;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .cart-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #searchBar {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #C8B6FF;
+            border-radius: 5px;
+        }
+        .orders-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .order {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .order:last-child {
+            border-bottom: none;
+        }
+        .order h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .order p {
+            margin: 5px 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">🐾 HappyPaws</div>
+        <nav>
+          <ul>
+            <li><a href="E-Commerce.html">Home</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="grooming.html">Grooming</a></li>
+            <li><a href="healthcare.html">Healthcare</a></li>
+            <li><a href="toys.html">Toys</a></li>
+            <li><a href="wearables.html">Wearables</a></li>
+            <li class="cart-icon">🛒<span class="cart-count">0</span></li>
+          </ul>
+        </nav>
+    </header>
+    
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search for your orders..." onkeyup="searchOrders()">
+    </div>
+
+    <div class="orders-container" id="ordersList">
+        <div class="order">
+            <h3>Order #001</h3>
+            <p>Product: Premium Dog Food</p>
+            <p>Status: Shipped</p>
+        </div>
+        <div class="order">
+            <h3>Order #002</h3>
+            <p>Product: Cat Collar with Bell</p>
+            <p>Status: Delivered</p>
+        </div>
+        <div class="order">
+            <h3>Order #003</h3>
+            <p>Product: Dog Grooming Kit</p>
+            <p>Status: Processing</p>
+        </div>
+    </div>
+
+    <script>
+        function searchOrders() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let orders = document.getElementsByClassName("order");
+
+            for (let i = 0; i < orders.length; i++) {
+                let orderText = orders[i].innerText.toLowerCase();
+                if (orderText.includes(input)) {
+                    orders[i].style.display = "block";
+                } else {
+                    orders[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

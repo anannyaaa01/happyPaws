@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HappyPaws - Food</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFD6FF;
+      color: #4A4A4A;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #C8B6FF;
+    }
+    .header .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #4A4A4A;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #4A4A4A;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .cart-icon {
+      font-size: 24px;
+      cursor: pointer;
+      position: relative;
+    }
+    .cart-count {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: red;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 5px 8px;
+      border-radius: 50%;
+      display: none;
+    }
+    .search-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .search-container input[type="text"] {
+      width: 60%;
+      padding: 10px;
+      border: 2px solid #C8B6FF;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 200px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    button {
+      background-color: #C8B6FF;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">🐾 HappyPaws</div>
+    <nav>
+      <ul>
+        <li><a href="E-Commerce.html">Home</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="toys.html">Toys</a></li>
+        <li><a href="grooming.html">Grooming</a></li>
+        <li><a href="wearables.html">wearables</a></li>
+        <li class="cart-icon">🛒<span class="cart-count">0</span></li>
+      </ul>
+    </nav>
+  </header>
+  
+ <div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search for medicines...">
+  </div>
+
+  <section class="product-list">
+    <div class="product">
+        <img src="https://supertails.com/cdn/shop/files/Pharmacy_14_360x.png?v=1696444958" alt="Skyec Skyworm Cat Deworming Tablet">
+        <h3>Skyec Skyworm Cat Deworming Tablet 4 packs</h3>
+        <p>INR 172</p>
+        <button onclick="buyNow('Skyec Skyworm Cat Deworming Tablet',172 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/files/Frame12280_1800x1800.png?v=1696450264" alt="Skyec Cat Star Syrup Multivitamin for Cats">
+        <h3>Skyec Cat Star Syrup Multivitamin for Cats</h3>
+        <p>INR 342</p>
+        <button onclick="buyNow('Skyec Cat Star Syrup Multivitamin for Cats', 342)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/files/Pharmacy_31_360x.png?v=1696611285" alt="Tick and Flea Control Spray for Dogs & Cats">
+        <h3>Tick and Flea Control Spray for Dogs & Cats</h3>
+        <p>INR 512</p>
+        <button onclick="buyNow('Tick and Flea Control Spray for Dogs & Cats',512 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/files/Pharmacy_53_360x.png?v=1696446234" alt="Vivaldis Kardioli Syrup (150ml)">
+        <h3>Vivaldis Kardioli Syrup (150ml) for doga and cats</h3>
+        <p>INR 412</p>
+        <button onclick="buyNow('Vivaldis Kardioli Syrup (150ml)',412 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/products/Frame12205_360x.png?v=1696450842" alt="Savavet K Pet (Ketoconazole) 200mg Tablet for Dogs & Cats">
+        <h3>Savavet K Pet (Ketoconazole) 200mg Tablet </h3>
+        <p>INR 312</p>
+        <button onclick="buyNow('Savavet K Pet (Ketoconazole) 200mg Tablet for Dogs & Cats', 312)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/products/Frame12306_1-448215_1800x1800.png?v=1696449018" alt="Intas Intacal Pet Calcium Supplement for Dogs and Cats">
+        <h3>Intas Intacal Pet Calcium Supplement for Dogs and Cats</h3>
+        <p>INR 354</p>
+        <button onclick="buyNow('Intas Intacal Pet Calcium Supplement for Dogs and Cats',354 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/files/Pharmacy_4_1800x1800.png?v=1696632714" alt="Vetina Canworm (Fenbendazole) Pet Deworming Suspension">
+        <h3>Vetina Canworm (Fenbendazole) Pet Deworming Suspension</h3>
+        <p>INR 229</p>
+        <button onclick="buyNow('Vetina Canworm (Fenbendazole) Pet Deworming Suspension',229 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/files/ph-2024-05-13T190420.554_1800x1800.jpg?v=1715607676" alt="Areion Vet Feli D Deworming Tablets for Cats (pack of 4 tablets)">
+        <h3>Areion Vet Feli D Deworming Tablets for Cats (pack of 4 tablets)</h3>
+        <p>INR 442</p>
+        <button onclick="buyNow('Areion Vet Feli D Deworming Tablets for Cats (pack of 4 tablets)',442 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/files/Pharmacy_56_4134a4d7-e438-4bfb-908b-1fd62676a3cc_1800x1800.png?v=1713875979" alt="Virbac Canitone Tablets Calcium Supplement for Dogs and Cats">
+        <h3>Virbac Canitone Tablets Calcium Supplement for Dogs and Cats</h3>
+        <p>INR 675</p>
+        <button onclick="buyNow('Virbac Canitone Tablets Calcium Supplement for Dogs and Cats', 675)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/products/Pharmacy_98-674173_1800x1800.png?v=1696450414" alt="ntas Cefpet XL 200mg (Cefpodoxime Proxetil) Tablet">
+        <h3>ntas Cefpet XL 200mg (Cefpodoxime Proxetil) Tablet</h3>
+        <p>INR 542</p>
+        <button onclick="buyNow('ntas Cefpet XL 200mg (Cefpodoxime Proxetil) Tablet', 542)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/files/Pharmacy_35_b0fc5f0f-1ba5-40f5-9efb-8c65a1cd66a9_1800x1800.png?v=1702028694" alt="Savavet Renodis Capsules">
+        <h3>Savavet Renodis Capsules pack of 2</h3>
+        <p>INR 221</p>
+        <button onclick="buyNow('Savavet Renodis Capsules',221 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/files/Pharmacy_20_c5ff9c09-f66c-41c9-8575-d136ceb9b34d_1800x1800.png?v=1696459380" alt="Vetoquinol Merical Pet Briskit DS for Dogs and Cats">
+        <h3>Vetoquinol Merical Pet Briskit DS for Dogs and Cats</h3>
+        <p>INR 222</p>
+        <button onclick="buyNow('Vetoquinol Merical Pet Briskit DS for Dogs and Cats', 222)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/products/Frame12188_1800x1800.png?v=1696450156" alt="Vetrina Respocare Cat Syrup (30ml)">
+        <h3>Vetrina Respocare Cat Syrup (30ml)</h3>
+        <p>INR 431</p>
+        <button onclick="buyNow('Vetrina Respocare Cat Syrup (30ml)',431 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/files/Frame12318_1800x1800.png?v=1696632849" alt="Virbac Canitone Joint Support (pack of 30 tablets)">
+        <h3>Virbac Canitone Joint Support (pack of 30 tablets)</h3>
+        <p>INR 513</p>
+        <button onclick="buyNow('Virbac Canitone Joint Support (pack of 30 tablets)',513 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://supertails.com/cdn/shop/files/ph-2024-05-27T185748.296_1800x1800.jpg?v=1716816506" alt="Dr Goel's Vommate for Dogs and Cats (30ml)">
+        <h3>Dr Goel's Vommate for Dogs and Cats (30ml)</h3>
+        <p>INR 123</p>
+        <button onclick="buyNow('Dr Goels Vommate for Dogs and Cats (30ml),123')">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+        </section>
+        <script>
+            let cartCount = 0;
+            const cartCountElement = document.querySelector('.cart-count');
+            
+            function addToCart() {
+                cartCount++;
+                cartCountElement.innerText = cartCount;
+                cartCountElement.style.display = 'block';
+            }
+            function buyNow(product, price) {
+                alert(`You are buying: ${product} for INR ${price}`);
+            }   
+        </script>
+      </body>
+      </html>

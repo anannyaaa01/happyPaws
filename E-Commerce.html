@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyPaws - Your Pet’s Favorite Place</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFD6FF;
+            color: #4A4A4A;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #C8B6FF;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #4A4A4A;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #4A4A4A;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .cart-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background: linear-gradient(135deg, #B8C0FF 50%, #BBD0FF 50%);
+            height: 80vh;
+        }
+        .hero-content {
+            max-width: 50%;
+            color: #4A4A4A;
+        }
+        .hero-content h1 {
+            font-size: 50px;
+            font-weight: 700;
+        }
+        .hero-content p {
+            font-size: 20px;
+            margin: 20px 0;
+            font-weight: 300;
+        }
+        .btn {
+            background-color: #E7C6FF;
+            color: #4A4A4A;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .hero-image img {
+            width: 450px;
+        }
+        .promo-banner {
+            background-color: #C8B6FF;
+            color: #4A4A4A;
+            text-align: center;
+            padding: 20px;
+            font-size: 22px;
+            font-weight: 700;
+            position: relative;
+        }
+        .promo-banner button {
+            background-color: #FFD6FF;
+            color: #4A4A4A;
+            border: none;
+            padding: 12px 22px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-left: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">🐾 HappyPaws</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="grooming.html">Grooming</a></li>
+                <li><a href="toys.html">Toys</a></li>
+                <li><a href="wearables.html">Wearables</a></li>
+                <li><a href="healthcare.html">Healthcare</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Orders.html">Orders</a></li>
+                <li class="cart-icon">🛒</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Pet’s Favourite Place</h1>
+            <p>We have the best products for your furry friend. Quality, care, and love in every purchase!</p>
+            <a href="#shop" class="btn">Explore Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://thumbs.dreamstime.com/b/adorable-dog-cat-high-five-pawsitive-display-friendship-playfulness-witness-heartwarming-moment-animal-companionship-as-353267815.jpg" alt="Dog and Cat High Five">
+        </div>
+    </section>
+    <section id="about">
+        <h2>Welcome to HappyPaws – Where Every Tail Wags & Whiskers Purr!</h2>
+        <p>It all started with a simple idea—happy pets make happy homes. At HappyPaws, we’re not just another pet store; we’re a community of pet lovers dedicated to providing the best for your furry companions.</p>
+        <h3>Our Story: Inspired by Love, Built for Pets</h3>
+        <p>It began with our own four-legged family members—always on the lookout for the healthiest food, safest toys, and top-notch grooming essentials. When we couldn’t find a one-stop shop that truly cared about quality and pet happiness, we created HappyPaws to bring only the best to pet parents like you!</p>
+        <h3>What Makes Us Different?</h3>
+        <p>🐾 Curated for Care – We handpick the best pet food, grooming essentials, and fun toys to keep tails wagging and whiskers twitching.</p>
+        <p>🐾 Quality You Can Trust – Every product we offer is pet-approved, safe, and designed for comfort, nutrition, and joy.</p>
+        <p>🐾 Passion-Driven Service – We’re pet parents too, and we treat your pets like our own—with love, care, and attention.</p>
+        <h3>Our Promise to Pet Parents</h3>
+        <p>At HappyPaws, we pledge to:</p>
+        <ul>
+            <li>✔️ Provide only high-quality, vet-approved products.</li>
+            <li>✔️ Ensure every toy and treat brings joy and health to your pet.</li>
+            <li>✔️ Be your trusted partner in pet care—because happy pets make happy hearts!</li>
+        </ul>
+        <h3>Join the HappyPaws Family!</h3>
+        <p>Let’s make every moment with your pet special. Shop now and give them the love they deserve! 🐕🐾🐈</p>
+    </section>
+    <section class="promo-banner">
+        Get 20% OFF your first order!
+        <button>WOOF WOOF</button>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Online Shopping</h3>
+                <ul>
+                    <li><a href="#">Dogs</a></li>
+                    <li><a href="#">Cats</a></li>
+                    <li><a href="#">Small Pets</a></li>
+                    <li><a href="#">Consult a Vet</a></li>
+                    <li><a href="#">Pet Pharmacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Track Your Order</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                    <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
+                    <a href="#"><i class="fab fa-youtube"></i>YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

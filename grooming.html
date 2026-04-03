@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HappyPaws - Food</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFD6FF;
+      color: #4A4A4A;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #C8B6FF;
+    }
+    .header .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #4A4A4A;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #4A4A4A;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .cart-icon {
+      font-size: 24px;
+      cursor: pointer;
+      position: relative;
+    }
+    .cart-count {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: red;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 5px 8px;
+      border-radius: 50%;
+      display: none;
+    }
+    .search-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .search-container input[type="text"] {
+      width: 60%;
+      padding: 10px;
+      border: 2px solid #C8B6FF;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 200px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    button {
+      background-color: #C8B6FF;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">🐾 HappyPaws</div>
+    <nav>
+      <ul>
+        <li><a href="E-Commerce.html">Home</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="toys.html">Toys</a></li>
+        <li><a href="healthcare.html">Healthcare</a></li>
+        <li><a href="wearables.html">wearables</a></li>
+        <li class="cart-icon">🛒<span class="cart-count">0</span></li>
+      </ul>
+    </nav>
+  </header>
+  
+ <div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search for grooming items...">
+  </div>
+
+  <section class="product-list">
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/714+F1Nxq1L._SX522_PIbundle-2,TopRight,0,0_AA522SH20_.jpg" alt="wet wipes">
+        <h3>Nourishing wet wipes</h3>
+        <p>INR 309</p>
+        <button onclick="buyNow('Nourishing wet wipes',309 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/515LnuSfU1L._SX522_.jpg" alt="Coat Cleanser">
+        <h3>Minty Fragrance Coat Cleanser</h3>
+        <p>INR 316</p>
+        <button onclick="buyNow('Coat Cleanser',316 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/41uUnwDqoRL._SX300_SY300_QL70_FMwebp_.jpg" alt="Dog brush">
+        <h3>Slicker brush with soft bristles</h3>
+        <p>INR 407</p>
+        <button onclick="buyNow('Slicker brush with soft bristles',407)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/Short_Silky_77399e33-0327-4deb-90cd-e2821e9285c7.jpg?v=1679060288&width=990" alt="soft coat dog shampoo">
+        <h3>soft coat dog shampoo</h3>
+        <p>INR 512</p>
+        <button onclick="buyNow('soft coat dog shampoo',512 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/NewShampoos-200ml-4.jpg?v=1739043393&width=990" alt="HUFT 4-in-1 shampoo and conditioner dogs">
+        <h3>4-in-1 shampoo and conditioner dogs</h3>
+        <p>INR 1248</p>
+        <button onclick="buyNow('HUFT 4-in-1 shampoo and conditioner dogs',1248 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/NewShampoos-200ml-2.jpg?v=1739045517&width=990" alt="Tick and Flee control dog shampoo">
+        <h3>Tick and Flee control dog shampoo</h3>
+        <p>INR 355</p>
+        <button onclick="buyNow('Tick and Flee control dog shampoo', 355)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/DSC_9143copy.jpg?v=1739789144&width=990" alt="Organic Paw Balm for dogs">
+        <h3>Dog Organic Paw Balm</h3>
+        <p>INR 399</p>
+        <button onclick="buyNow('Dog Organic Paw Balm', 399)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/8906179171058.jpg?v=1719828998&width=990" alt="Beaphar Dimethicare Tick & Flea Shampoo For Dog & Cat">
+        <h3>Tick & Flea Shampoo For Dog & Cat</h3>
+        <p>INR 899</p>
+        <button onclick="buyNow('Tick & Flea Shampoo For Dog & Cat',899 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/NewShampoos-200ml-3.jpg?v=1739045513&width=990" alt="Natural Shampoo for Puppy and Kitten - Vanilla & Honey">
+        <h3>Natural Shampoo for Puppy and Kitten</h3>
+        <p>INR 339</p>
+        <button onclick="buyNow('Natural Shampoo for Puppy and Kitten - Vanilla & Honey', 339)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/DSC_0270-Edit.jpg?v=1739045652&width=990" alt="Double Sided Steel Comb for Cats & Dogs">
+        <h3>Steel Comb for Cats & Dogs</h3>
+        <p>INR 449 </p>
+        <button onclick="buyNow('Double Sided Steel Comb for Cats & Dogs',449 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/TrixieToothbrushSetforDogsandCats-Setof2_1FingerBrushand1MassageBrush_1.jpg?v=1639725741&width=990" alt="Toothbrush Set for Dogs and Cats - Set of 2 (1 Finger Brush and 1 Massage Brush)">
+        <h3>Toothbrush Set for Dogs and Cats</h3>
+        <p>INR 756 </p>
+        <button onclick="buyNow('Toothbrush Set for Dogs and Cats',756 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/PetkinPlaqueSpray-DentalCareSolutionforDogsandCats-120ml_ed735f24-44ba-430c-84c7-b48b16c514ef.jpg?v=1687410833&width=990" alt="Petkin Plaque Spray">
+        <h3>Petkin Plaque Spray Dental Care Solution </h3>
+        <p>INR 816</p>
+        <button onclick="buyNow('Petkin Plaque Spray',816 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/TropiCleanPurePlumDeodorizingDog_CatSpray-236ml.jpg?v=1677826419&width=990" alt="TropiClean Pure Plum Deodorizing Dog & Cat Spray">
+        <h3>Deodorizing Dog & Cat Spray</h3>
+        <p>INR 1120</p>
+        <button onclick="buyNow('TropiClean Pure Plum Deodorizing Dog & Cat Spray',1120 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/files/036239053692-3.jpg?v=1689312329&width=990" alt="Spa Dog Perfume - Lavender">
+        <h3>Spa Dog Perfume - Lavender</h3>
+        <p>INR 998</p>
+        <button onclick="buyNow('Spa Dog Perfume - Lavender',998 )">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://headsupfortails.com/cdn/shop/products/036239055733.jpg?v=1656931956&width=990" alt="Bamboo Natural Travel Pack Pet Wipes">
+        <h3>Natural Travel Pack Pet Wipes</h3>
+        <p>INR 1123</p>
+        <button onclick="buyNow('Bamboo Natural Travel Pack Pet Wipes', 1123)">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+  </section>
+  <script>
+    let cartCount = 0;
+    const cartCountElement = document.querySelector('.cart-count');
+    
+    function addToCart() {
+        cartCount++;
+        cartCountElement.innerText = cartCount;
+        cartCountElement.style.display = 'block';
+    }
+    function buyNow(product, price) {
+        alert(`You are buying: ${product} for INR ${price}`);
+    }   
+</script>
+</body>
+</html>
